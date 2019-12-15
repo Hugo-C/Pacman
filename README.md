@@ -11,4 +11,4 @@ All contributions / reuse are welcome ! 🤗
 - Add more enemies / AI (from the classic game or completely new one)
 - Gifs ! \( •̀ ω •́ )✧
 
-> The classic game was made using a tutorial from [awesometuts](www.awesometuts.com) hosted by [freecodecamp](www.freecodecamp.org). Much thanks to them ! ❤
+> The classic game was made using a tutorial from [awesometuts](https://www.awesometuts.com) hosted by [freecodecamp](https://www.freecodecamp.org). Much thanks to them ! ❤

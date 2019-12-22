@@ -33,13 +33,16 @@ protected:
 public:
     void SetDirection(const FVector Direction);
 	bool IsFrozen() { return Frozen; }
+	
+	UPROPERTY(BlueprintReadOnly)
+    int score;
 
 	UFUNCTION(BlueprintCallable)
-		void SetFrozen(bool value) { Frozen = value; }
+	void SetFrozen(bool value) { Frozen = value; }
 
 private:
 
 	UFUNCTION()
-		void OnOverlapBegin(AActor* PlayerActor, AActor* OtherActor);
+	void OnOverlapBegin(AActor* PlayerActor, AActor* OtherActor);
 
 };

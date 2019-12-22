@@ -44,5 +44,4 @@ public:
 private:
     UPROPERTY(EditAnywhere)
     USoundCue* ConsumptionSound;
-
 };

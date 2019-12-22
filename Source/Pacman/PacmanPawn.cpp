@@ -8,13 +8,14 @@
 APacmanPawn::APacmanPawn() {
     // Set this pawn to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
     PrimaryActorTick.bCanEverTick = true;
-
+	score = 0;
 }
 
 // Called when the game starts or when spawned
 void APacmanPawn::BeginPlay() {
     Super::BeginPlay();
     OnActorBeginOverlap.AddDynamic(this, &APacmanPawn::OnOverlapBegin);
+
 }
 
 // Called every frame
@@ -46,9 +47,11 @@ void APacmanPawn::SetDirection(const FVector Direction) {
 
 void APacmanPawn::OnOverlapBegin(AActor *PlayerActor, AActor *OtherActor) {
     if (OtherActor->ActorHasTag("Foodie.Regular")) {
+		score += 1;
         Cast<AFoodie>(OtherActor)->Consume();
     } else if ( OtherActor->ActorHasTag("Foodie.PowerUp")) {
         Cast<AFoodie>(OtherActor)->Consume();
+		score += 1;
     }
 }
 
